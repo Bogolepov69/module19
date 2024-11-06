@@ -2,6 +2,12 @@ from django.db import models
 from decimal import Decimal
 
 
+class Article(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    author = models.CharField(max_length=255)
+    published_date = models.DateField()
+
 class Buyer(models.Model):
     objects = None
     name = models.CharField(max_length=100)
