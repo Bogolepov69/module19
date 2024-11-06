@@ -3,6 +3,7 @@ from decimal import Decimal
 
 
 class Buyer(models.Model):
+    objects = None
     name = models.CharField(max_length=100)
     balance = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
     age = models.IntegerField()
@@ -12,6 +13,7 @@ class Buyer(models.Model):
 
 
 class Game(models.Model):
+    objects = None
     title = models.CharField(max_length=200)
     cost = models.DecimalField(max_digits=10, decimal_places=2)
     size = models.DecimalField(max_digits=10, decimal_places=2)

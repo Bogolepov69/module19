@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block pagename %}ТРИ СОКРОВИЩА{% endblock %}</title>
+</head>
+<body>
+    <h1>ТРИ СОКРОВИЩА</h1>
+    <h2>Здесь можно приобрести <br>увлекательные игры на любой вкус</h2>
+    {% block menu %}
+        <a href="/">Главная страница</a><br>
+        <a href="/shop/">Магазин</a><br>
+        <a href="/basket/">Корзина</a><br>
+        <a href="/registration_page/">Регистрация</a><br>
+    {% endblock %}
+    {% block content %}
+        <h2>
+            В вашей корзине пока нет товаров
+        </h2>
+    {% endblock %}
+</body>
+</html>
+
